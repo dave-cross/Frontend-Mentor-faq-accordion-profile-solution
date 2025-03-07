@@ -1,4 +1,6 @@
 :root {
+  interpolate-size: allow-keywords;
+
   --white: hsl(0, 0%, 100%);
   --light-pink: hsl(274, 100%, 97%);
   --pink: hsl(281, 83%, 54%); /* NOT IN STYLE-GUIDE */
@@ -81,4 +83,65 @@ img,
 svg {
   display: block;
   max-width: 100%;
+}
+
+details {
+  overflow: hidden;
+}
+
+details > * + * {
+  padding-block-start: var(--space-300);
+}
+
+details::details-content {
+  block-size: 0;
+  transition: block-size 0.5s, content-visibility 0.5s;
+  transition-behavior: allow-discrete;
+}
+
+details:open {
+  --summary-icon: url(assets/images/icon-minus.svg);
+}
+
+details:open::details-content {
+  block-size: auto;
+}
+
+summary {
+  --_summary-icon: var(--summary-icon, url(assets/images/icon-plus.svg));
+  cursor: pointer;
+  color: var(--text-color-heading);
+  font-size: var(--text-style-2);
+  font-weight: 600;
+  line-height: normal;
+
+  list-style: none;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-300);
+
+  &::-webkit-details-marker {
+    display: none;
+  }
+
+  &::after {
+    content: var(--_summary-icon);
+    height: 31px;
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      color: var(--text-color-hover);
+    }
+  }
+
+  &:focus {
+    color: var(--text-color-hover);
+  }
+}
+
+.faq {
+  background-color: var(--white);
 }
