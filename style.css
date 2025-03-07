@@ -163,6 +163,15 @@ summary {
   }
 }
 
+.overlap {
+  display: grid;
+
+  > *,
+  &::before {
+    grid-area: 1/1/-1/-1;
+  }
+}
+
 .challenge-wrapper {
   --_max-width: var(--max-width, 320px);
 
@@ -171,6 +180,22 @@ summary {
   min-height: 100vh;
   padding: var(--space-300)
     max(var(--space-300), calc(50% - var(--_max-width) / 2));
+}
+
+.swirl::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 232px;
+  background-image: url(assets/images/background-pattern-mobile.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+
+  @media (min-width: 450px) {
+    height: 320px;
+    background-image: url(assets/images/background-pattern-desktop.svg);
+  }
 }
 
 .faq {
