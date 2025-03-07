@@ -174,5 +174,23 @@ summary {
 }
 
 .faq {
+  --flow-space: var(--space-300);
   background-color: var(--white);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow);
+  padding: var(--space-300);
+  width: 100%;
+
+  @media (min-width: 450px) {
+    --flow-space: var(--space-400);
+    padding: var(--space-500);
+  }
+}
+
+.faq__content > * {
+  --flow-space: var(--space-250);
+
+  @media (min-width: 450px) {
+    --flow-space: var(--space-300);
+  }
 }
