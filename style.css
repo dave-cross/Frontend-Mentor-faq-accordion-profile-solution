@@ -142,6 +142,37 @@ summary {
   }
 }
 
+.flow > * + * {
+  margin-block-start: var(--flow-space, var(--space-300));
+}
+
+.cluster {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--cluster-space, var(--space-300));
+  justify-content: start;
+  align-items: var(--cluster-align, center);
+}
+
+.has-icon {
+  --cluster-align: baseline;
+
+  svg,
+  img {
+    height: 1.1cap;
+  }
+}
+
+.challenge-wrapper {
+  --_max-width: var(--max-width, 320px);
+
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  padding: var(--space-300)
+    max(var(--space-300), calc(50% - var(--_max-width) / 2));
+}
+
 .faq {
   background-color: var(--white);
 }
