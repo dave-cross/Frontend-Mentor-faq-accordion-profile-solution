@@ -1,0 +1,84 @@
+:root {
+  --white: hsl(0, 0%, 100%);
+  --light-pink: hsl(274, 100%, 97%);
+  --pink: hsl(281, 83%, 54%); /* NOT IN STYLE-GUIDE */
+  --pale-purple: hsl(292, 16%, 49%);
+  --dark-purple: hsl(292, 42%, 14%);
+
+  --text-color-body: var(--pale-purple);
+  --text-color-heading: var(--dark-purple);
+  --text-color-hover: var(--pink);
+
+  --fill-color-body: var(--light-pink);
+  --fill-color-hr: var(--light-pink);
+
+  --space-100: 8px;
+  --space-200: 16px;
+  --space-250: 20px;
+  --space-300: 24px;
+  --space-400: 32px;
+  --space-500: 40px;
+
+  --radius-lg: 16px;
+  --radius-sm: 8px;
+
+  --shadow: 0 32px 56px hsl(281 100% 23% / 0.1);
+
+  --max-width: 600px;
+
+  --text-style-1-lg: 56px;
+  --text-style-1-sm: 32px;
+  --text-style-2-lg: 18px;
+  --text-style-2-sm: 16px;
+  --text-style-3-lg: 16px;
+  --text-style-3-sm: 14px;
+
+  --font-family: "Work Sans", sans-serif;
+
+  --text-style-1: var(--text-style-1-sm);
+  --text-style-2: var(--text-style-2-sm);
+  --text-style-3: var(--text-style-3-sm);
+
+  @media (min-width: 450px) {
+    --text-style-1: var(--text-style-1-lg);
+    --text-style-2: var(--text-style-2-lg);
+    --text-style-3: var(--text-style-3-lg);
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-family);
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: var(--text-style-3);
+  color: var(--text-color-body);
+  background-color: var(--fill-color-body);
+  line-height: 1.5;
+}
+
+h1 {
+  font-size: var(--text-style-1);
+  font-weight: 700;
+  color: var(--text-color-heading);
+  line-height: normal;
+}
+
+hr {
+  border: 0;
+  border-block-start: 1px solid var(--fill-color-hr);
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
