@@ -99,7 +99,7 @@ details::details-content {
   transition-behavior: allow-discrete;
 }
 
-details:open {
+details[open] {
   --summary-icon: url(assets/images/icon-minus.svg);
 }
 
@@ -186,15 +186,15 @@ summary {
   content: "";
   display: block;
   inline-size: 100%;
-  block-size: 232px;
-  background-image: url(assets/images/background-pattern-mobile.svg);
+  block-size: 320px;
+  background-image: url(assets/images/background-pattern-desktop.svg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top center;
 
-  @media (min-width: 450px) {
-    block-size: 320px;
-    background-image: url(assets/images/background-pattern-desktop.svg);
+  @media (max-width: 449px) {
+    block-size: 232px;
+    background-image: url(assets/images/background-pattern-mobile.svg);
   }
 }
 
