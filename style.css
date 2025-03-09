@@ -199,23 +199,23 @@ summary {
 }
 
 .faq {
-  --flow-space: var(--space-300);
+  --flow-space: var(--space-400);
+  padding: var(--space-500);
   background-color: var(--white);
   border-radius: var(--radius-sm);
   box-shadow: var(--shadow);
-  padding: var(--space-300);
   inline-size: 100%;
 
-  @media (min-width: 450px) {
-    --flow-space: var(--space-400);
-    padding: var(--space-500);
+  @media (max-width: 449px) {
+    --flow-space: var(--space-300);
+    padding: var(--space-300);
   }
 }
 
 .faq__content > * {
-  --flow-space: var(--space-250);
+  --flow-space: var(--space-300);
 
-  @media (min-width: 450px) {
-    --flow-space: var(--space-300);
+  @media (max-width: 449px) {
+    --flow-space: var(--space-250);
   }
 }
